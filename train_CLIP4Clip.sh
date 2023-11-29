@@ -1,8 +1,8 @@
 #!/bin/bash
 
-# TODO: training test
+# DEBUG: env error
 DATA_PATH=/home/heesu/data/msrvtt/msrvtt_data
-python -m torch.distributed.launch --nproc_per_node=2 \
+torchrun --nproc_per_node=2 \
 CLIP4Clip/main_task_retrieval.py --do_train --num_thread_reader=8 \
 --epochs=5 --batch_size=128 --n_display=50 \
 --train_csv ${DATA_PATH}/MSRVTT_train.9k.csv \

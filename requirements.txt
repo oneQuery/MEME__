@@ -8,3 +8,4 @@ boto3
 requests
 pandas
 opencv-python
+chardet
